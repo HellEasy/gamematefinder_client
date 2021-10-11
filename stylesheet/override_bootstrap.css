@@ -1,0 +1,39 @@
+.btn-primary {
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #ffffff;
+}
+
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary,
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  color: #ffffff;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+  color: #ffffff;
+}
+
+.btn-outline-primary:hover {
+  color: #ffffff;
+}
+
+.btn-check:checked + .btn-outline-primary,
+.btn-check:active + .btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=override_bootstrap.css.map */
