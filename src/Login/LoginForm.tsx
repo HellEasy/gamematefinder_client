@@ -28,12 +28,16 @@ const LoginForm = () => {
       </Row>
 
       <Row className="mb-3">
-        <Button as={Col} type="submit" variant="primary" className="btn btn-lg mx-3 fs-6 fw-bold">
-          LOG IN
-        </Button>
-        <Button as={Col} type="button" variant="outline-primary" className="btn btn-lg mx-3 fs-6 fw-bold">
-          SIGN UP
-        </Button>
+        <Col className="mx-3">
+          <Button type="submit" variant="primary" className="btn btn-lg fs-6 fw-bold w-100">
+            LOG IN
+          </Button>
+        </Col>
+        <Col className="mx-3">
+          <Button type="button" variant="outline-primary" className="btn btn-lg fs-6 fw-bold w-100">
+            SIGN UP
+          </Button>
+        </Col>
       </Row>
     </Form>
   )
