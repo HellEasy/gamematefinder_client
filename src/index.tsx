@@ -1,11 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import reportWebVitals from "./reportWebVitals"
-import LoginPage from "./Login"
+import Index from "./Main"
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoginPage />
+    {/*<LoginPage />*/}
+    <Index />
   </React.StrictMode>,
   document.getElementById("root"),
 )
