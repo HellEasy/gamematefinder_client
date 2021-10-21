@@ -1,12 +1,18 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import reportWebVitals from "./reportWebVitals"
-import Index from "./Main"
+import Main from "./Main"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import HeroPage from "./Hero/HeroPage"
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<LoginPage />*/}
-    <Index />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route path={["/login", "/signup"]} component={HeroPage} />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root"),
 )
