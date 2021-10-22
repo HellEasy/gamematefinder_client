@@ -7,7 +7,7 @@ import HeroPage from "./Hero/HeroPage"
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/gamematefinder_client">
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path={["/login", "/signup"]} component={HeroPage} />
