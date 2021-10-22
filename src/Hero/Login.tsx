@@ -4,23 +4,21 @@ import { Link } from "react-router-dom"
 import LolImg from "../img/GameLogo/lol.png"
 import LostArkImg from "../img/GameLogo/lostark.png"
 
-const Form = () => {
+const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <BSForm className="m-3">
+    <BSForm className={`m-3 ${props.className}`}>
       <Row className="mb-1">
         <BSForm.Group as={Col} className="mb-3" controlId="formLoginID">
           <BSForm.Label className="fw-bold">ID</BSForm.Label>
           <BSForm.Control required className="rounded-3" type="text" />
         </BSForm.Group>
       </Row>
-      
       <Row className="mb-1">
         <BSForm.Group as={Col} className="mb-3" controlId="formLoginPassword">
           <BSForm.Label className="fw-bold">Password</BSForm.Label>
           <BSForm.Control required className="rounded-3" type="password" />
         </BSForm.Group>
       </Row>
-      
       <Row className="mb-3">
         <Col>
           <BSForm.Check label="아이디 저장" type="checkbox" />
@@ -29,7 +27,6 @@ const Form = () => {
           <BSForm.Check label="자동 로그인" type="checkbox" />
         </Col>
       </Row>
-      
       <Row className="mb-3 g-2">
         <Col>
           <Link to="/">
@@ -50,9 +47,9 @@ const Form = () => {
   )
 }
 
-const Hero = () => {
+const Hero: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <>
+    <div className={props.className}>
       <h1>GAME</h1>
       <h1>MATE</h1>
       <h1>FINDER</h1>
@@ -60,7 +57,7 @@ const Hero = () => {
         <Image src={LolImg} height="75" alt="Lol Logo" />
         <Image src={LostArkImg} height="75" alt="LostArk Logo" />
       </div>
-    </>
+    </div>
   )
 }
 
