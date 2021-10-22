@@ -49,7 +49,7 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
 
 const Hero: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <div className={props.className}>
+    <div className={`${props.className ? props.className : ""}`}>
       <h1>GAME</h1>
       <h1>MATE</h1>
       <h1>FINDER</h1>
