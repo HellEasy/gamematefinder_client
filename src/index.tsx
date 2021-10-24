@@ -1,15 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import reportWebVitals from "./reportWebVitals"
-import Main from "./Main"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import HeroPage from "./Hero/HeroPage"
+import HeroPage from "./Hero"
+import MainPage from "./Main"
+import reportWebVitals from "./reportWebVitals"
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename="/gamematefinder_client">
       <Switch>
-        <Route exact path="/" component={Main} />
+        <Route exact path="/" component={MainPage} />
         <Route path={["/login", "/signup"]} component={HeroPage} />
       </Switch>
     </BrowserRouter>
