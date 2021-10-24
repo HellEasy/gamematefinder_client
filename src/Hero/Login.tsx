@@ -6,7 +6,7 @@ import LostArkImg from "../img/GameLogo/lostark.png"
 
 const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <BSForm className={`m-3 ${props.className ? props.className : ""}`}>
+    <BSForm {...props} className={`m-3${props.className ? " " + props.className : ""}`}>
       <Row className="mb-1">
         <BSForm.Group as={Col} className="mb-3" controlId="formLoginID">
           <BSForm.Label className="fw-bold">ID</BSForm.Label>
@@ -49,10 +49,10 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
 
 const Hero: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <div className={`${props.className ? props.className : ""}`}>
-      <h1>GAME</h1>
-      <h1>MATE</h1>
-      <h1>FINDER</h1>
+    <div {...props}>
+      <h1>GAME </h1>
+      <h1>MATE </h1>
+      <h1>FINDER </h1>
       <div>
         <Image src={LolImg} height="75" alt="Lol Logo" />
         <Image src={LostArkImg} height="75" alt="LostArk Logo" />
