@@ -5,7 +5,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://use.typekit.net/hoq4vxy.css");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11157,8 +11156,4 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
-* {
-  font-family: acumin-pro, sans-serif;
-}
-
-/*# sourceMappingURL=theme.css.map */
+/*# sourceMappingURL=bootstrap.css.map */
