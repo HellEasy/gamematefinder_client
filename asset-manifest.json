@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gamematefinder_client/static/css/main.248bc86b.chunk.css",
-    "main.js": "/gamematefinder_client/static/js/main.0c81d6f3.chunk.js",
-    "main.js.map": "/gamematefinder_client/static/js/main.0c81d6f3.chunk.js.map",
+    "main.js": "/gamematefinder_client/static/js/main.7cfa04b8.chunk.js",
+    "main.js.map": "/gamematefinder_client/static/js/main.7cfa04b8.chunk.js.map",
     "runtime-main.js": "/gamematefinder_client/static/js/runtime-main.bd9b2a42.js",
     "runtime-main.js.map": "/gamematefinder_client/static/js/runtime-main.bd9b2a42.js.map",
     "static/js/2.c5d23e92.chunk.js": "/gamematefinder_client/static/js/2.c5d23e92.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.bd9b2a42.js",
     "static/js/2.c5d23e92.chunk.js",
     "static/css/main.248bc86b.chunk.css",
-    "static/js/main.0c81d6f3.chunk.js"
+    "static/js/main.7cfa04b8.chunk.js"
   ]
 }
