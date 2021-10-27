@@ -16,7 +16,7 @@ function Index() {
 
       <Row className="flex-grow-1">
         <Col xs={6} md={4} lg={3} className="p-0 pt-4 border-end border-1">
-          <h2 className="ms-4 mb-4 fw-bold">나의 파티</h2>
+          <h3 className="ms-4 mb-4 fw-bold">나의 파티</h3>
           {/* My Party List */}
           <MyPartyList className="mt-3" defaultActiveKey="#link1">
             <MyPartyListItem action href="#link1" name="파티이름" content="내용" date={new Date()} />
@@ -26,23 +26,11 @@ function Index() {
         </Col>
 
         <Col className="pt-4">
-          <h2 className="ms-4 mb-4 fw-bold">지금 구하고 있어요</h2>
+          <h3 className="ms-4 mb-4 fw-bold">지금 구하고 있어요</h3>
           <PartyCardGroup className="p-0">
-            <PartyCard
-              name={"Dolore magna aliqua"}
-              content={"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat."}
-              date={new Date()}
-            />
-            <PartyCard
-              name={"Dolore magna aliqua"}
-              content={"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat."}
-              date={new Date()}
-            />
-            <PartyCard
-              name={"Dolore magna aliqua"}
-              content={"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat."}
-              date={new Date()}
-            />
+            <PartyCard />
+            <PartyCard />
+            <PartyCard />
             <PartyCard
               name={"Dolore magna aliqua"}
               content={"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat."}
