@@ -15,7 +15,7 @@ function Index() {
       </Row>
 
       <Row className="flex-grow-1">
-        <Col xs={6} md={4} lg={3} className="p-0 pt-4 border-end border-1">
+        <Col xs={5} md={4} lg={3} className="d-none d-sm-block p-0 pt-4 border-end border-1">
           <h3 className="ms-4 mb-4 fw-bold">나의 파티</h3>
           {/* My Party List */}
           <MyPartyList className="mt-3" defaultActiveKey="#link1">

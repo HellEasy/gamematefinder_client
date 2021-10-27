@@ -28,24 +28,26 @@ const CustomNavbar = () => {
 
   return (
     <Navbar bg="primary" variant="dark" sticky="top" expand="sm">
-      <Container fluid>
-        <Navbar.Toggle aria-controls="navbar-dark-example" />
-        <Navbar.Collapse id="navbar-dark-example">
-          <Nav className="me-auto">
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title={<img src={gameList[game].imgsrc} height="75" alt={`${gameList[game].name} Logo`} />}
-              menuVariant="dark"
-            >
-              {Object.entries(gameList).map(([key, value]) => (
-                <NavDropdown.Item href={value.href} onClick={() => setGame(key)}>
-                  <img src={value.imgsrc} height="75" alt={`${value.name} Logo`} />
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#feaures" className="text-uppercase fw-bold fs-2">
+      <Container fluid className="p-0">
+        <Navbar.Brand className="ms-0">
+          <NavDropdown
+            title={<img src={gameList[game].imgsrc} height="75" alt={`${gameList[game].name} Logo`} />}
+            menuVariant="dark"
+            className="p-0"
+          >
+            {Object.entries(gameList).map(([key, value]) => (
+              <NavDropdown.Item href={value.href} onClick={() => setGame(key)}>
+                <img src={value.imgsrc} height="75" alt={`${value.name} Logo`} />
+              </NavDropdown.Item>
+            ))}
+          </NavDropdown>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="p-0">
+          <Nav className="ms-auto px-3 py-1">
+            {/* TODO: onclick Action for 나의 파티 */}
+            <Nav.Link className="d-block d-sm-none fw-bold fs-3">나의 파티</Nav.Link>
+            <Nav.Link href="#feaures" className="text-uppercase fw-bold fs-3">
               <Image roundedCircle src={UserImage} width="32px" /> User Name
             </Nav.Link>
           </Nav>
