@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/gamematefinder_client/static/css/main.248bc86b.chunk.css",
-    "main.js": "/gamematefinder_client/static/js/main.279426ca.chunk.js",
-    "main.js.map": "/gamematefinder_client/static/js/main.279426ca.chunk.js.map",
+    "main.js": "/gamematefinder_client/static/js/main.0c81d6f3.chunk.js",
+    "main.js.map": "/gamematefinder_client/static/js/main.0c81d6f3.chunk.js.map",
     "runtime-main.js": "/gamematefinder_client/static/js/runtime-main.bd9b2a42.js",
     "runtime-main.js.map": "/gamematefinder_client/static/js/runtime-main.bd9b2a42.js.map",
-    "static/js/2.70a979a2.chunk.js": "/gamematefinder_client/static/js/2.70a979a2.chunk.js",
-    "static/js/2.70a979a2.chunk.js.map": "/gamematefinder_client/static/js/2.70a979a2.chunk.js.map",
+    "static/js/2.c5d23e92.chunk.js": "/gamematefinder_client/static/js/2.c5d23e92.chunk.js",
+    "static/js/2.c5d23e92.chunk.js.map": "/gamematefinder_client/static/js/2.c5d23e92.chunk.js.map",
     "static/js/3.ff1958b7.chunk.js": "/gamematefinder_client/static/js/3.ff1958b7.chunk.js",
     "static/js/3.ff1958b7.chunk.js.map": "/gamematefinder_client/static/js/3.ff1958b7.chunk.js.map",
     "index.html": "/gamematefinder_client/index.html",
     "static/css/main.248bc86b.chunk.css.map": "/gamematefinder_client/static/css/main.248bc86b.chunk.css.map",
-    "static/js/2.70a979a2.chunk.js.LICENSE.txt": "/gamematefinder_client/static/js/2.70a979a2.chunk.js.LICENSE.txt",
+    "static/js/2.c5d23e92.chunk.js.LICENSE.txt": "/gamematefinder_client/static/js/2.c5d23e92.chunk.js.LICENSE.txt",
     "static/media/UserImage.4f8e116e.jpg": "/gamematefinder_client/static/media/UserImage.4f8e116e.jpg",
     "static/media/lol.484cafcf.png": "/gamematefinder_client/static/media/lol.484cafcf.png",
     "static/media/lostark.68dfc74d.png": "/gamematefinder_client/static/media/lostark.68dfc74d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bd9b2a42.js",
-    "static/js/2.70a979a2.chunk.js",
+    "static/js/2.c5d23e92.chunk.js",
     "static/css/main.248bc86b.chunk.css",
-    "static/js/main.279426ca.chunk.js"
+    "static/js/main.0c81d6f3.chunk.js"
   ]
 }
