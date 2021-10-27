@@ -24,7 +24,7 @@ const MyPartyListItem: React.FC<PartyListElementProps> = props => {
             <small className="p-0">{props.content}</small>
           </Row>
         </Col>
-        
+
         <Col className="text-end p-0" xs={"auto"}>
           {/* Date */}
           <Row>

@@ -2,7 +2,7 @@ interface PartyProps {
   name: string
   content: string
   imgsrc?: string
-  date: Date,
+  date: Date
 }
 
 export default PartyProps
