@@ -1,6 +1,6 @@
 import React from "react"
 import { Badge, Col, Container, ListGroup, Row } from "react-bootstrap"
-import { FaUser } from "react-icons/all"
+// import { FaUser } from "react-icons/all"
 import PartyProps from "../../interfaces/PartyProps"
 import { ListGroupItemProps } from "react-bootstrap/ListGroupItem"
 
@@ -14,7 +14,8 @@ const MyPartyListItem: React.FC<PartyListElementProps> = props => {
       <Row className="align-items-center h-100">
         {/* Icon */}
         <Col className="text-center" xs={"auto"}>
-          <FaUser />
+          {/* TODO: Compatible Icon Here */}
+          {/*<FaUser />*/}
         </Col>
         <Col>
           {/* Title */}
