@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/gamematefinder_client/static/css/main.fbba4db1.chunk.css",
-    "main.js": "/gamematefinder_client/static/js/main.a0a4dc76.chunk.js",
-    "main.js.map": "/gamematefinder_client/static/js/main.a0a4dc76.chunk.js.map",
-    "runtime-main.js": "/gamematefinder_client/static/js/runtime-main.ba9441b5.js",
-    "runtime-main.js.map": "/gamematefinder_client/static/js/runtime-main.ba9441b5.js.map",
-    "static/js/2.6c7f080b.chunk.js": "/gamematefinder_client/static/js/2.6c7f080b.chunk.js",
-    "static/js/2.6c7f080b.chunk.js.map": "/gamematefinder_client/static/js/2.6c7f080b.chunk.js.map",
-    "static/js/3.e02990d7.chunk.js": "/gamematefinder_client/static/js/3.e02990d7.chunk.js",
-    "static/js/3.e02990d7.chunk.js.map": "/gamematefinder_client/static/js/3.e02990d7.chunk.js.map",
+    "main.js": "/gamematefinder_client/static/js/main.8b2332c8.chunk.js",
+    "main.js.map": "/gamematefinder_client/static/js/main.8b2332c8.chunk.js.map",
+    "runtime-main.js": "/gamematefinder_client/static/js/runtime-main.95c66657.js",
+    "runtime-main.js.map": "/gamematefinder_client/static/js/runtime-main.95c66657.js.map",
+    "static/js/2.a06d9fcd.chunk.js": "/gamematefinder_client/static/js/2.a06d9fcd.chunk.js",
+    "static/js/2.a06d9fcd.chunk.js.map": "/gamematefinder_client/static/js/2.a06d9fcd.chunk.js.map",
+    "static/js/3.ab89192b.chunk.js": "/gamematefinder_client/static/js/3.ab89192b.chunk.js",
+    "static/js/3.ab89192b.chunk.js.map": "/gamematefinder_client/static/js/3.ab89192b.chunk.js.map",
     "index.html": "/gamematefinder_client/index.html",
     "static/css/main.fbba4db1.chunk.css.map": "/gamematefinder_client/static/css/main.fbba4db1.chunk.css.map",
-    "static/js/2.6c7f080b.chunk.js.LICENSE.txt": "/gamematefinder_client/static/js/2.6c7f080b.chunk.js.LICENSE.txt",
+    "static/js/2.a06d9fcd.chunk.js.LICENSE.txt": "/gamematefinder_client/static/js/2.a06d9fcd.chunk.js.LICENSE.txt",
     "static/media/UserImage.4f8e116e.jpg": "/gamematefinder_client/static/media/UserImage.4f8e116e.jpg",
     "static/media/lol.484cafcf.png": "/gamematefinder_client/static/media/lol.484cafcf.png",
     "static/media/lostark.68dfc74d.png": "/gamematefinder_client/static/media/lostark.68dfc74d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ba9441b5.js",
-    "static/js/2.6c7f080b.chunk.js",
+    "static/js/runtime-main.95c66657.js",
+    "static/js/2.a06d9fcd.chunk.js",
     "static/css/main.fbba4db1.chunk.css",
-    "static/js/main.a0a4dc76.chunk.js"
+    "static/js/main.8b2332c8.chunk.js"
   ]
 }
