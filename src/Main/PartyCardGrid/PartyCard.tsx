@@ -1,7 +1,7 @@
 import React from "react"
 import PartyProps from "../../interfaces/PartyProps"
 import { Card, Placeholder } from "react-bootstrap"
-// import { BiTimeFive } from "react-icons/all"
+import { BiTimeFive } from "react-icons/all"
 import { Link } from "react-router-dom"
 import "./PartyCard.scss"
 
@@ -59,8 +59,7 @@ const PartyCard: React.FC<PartyCardProps> = props => {
           {/* Date */}
           <Card.Text className="text-muted fw-light mb-2">
             <small>
-              {/* TODO: Compatible Icon Here */}
-              {/*<BiTimeFive />*/}{" "}
+              <BiTimeFive />{" "}
               {props.date ? (
                 getRTF(props.date)
               ) : (

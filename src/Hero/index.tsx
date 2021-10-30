@@ -9,9 +9,6 @@ import Wrapper from "./Wrapper"
 const breakpoint = "lg"
 
 const HeroPage = () => {
-  // FIXME: FindDOMNode Deprecated
-  // https://github.com/reactjs/react-transition-group/releases/tag/v4.4.0
-
   return (
     <>
       {/*/!* mobile *!/*/}
