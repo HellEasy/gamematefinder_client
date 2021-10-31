@@ -9,7 +9,7 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
       <BSForm {...props}>
         <Row className="align-items-center w-100">
           <Col xs lg="2" className="fw-bold w-100">
-            ID
+            <BSForm.Label className="fw-bold">ID</BSForm.Label>
           </Col>
           <Col xs={6}>
             <BSForm.Control required className="rounded-3" type="text" />
@@ -60,7 +60,7 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
             <BSForm.Control required className="rounded-3" type="email" placeholder="name@example.com" />
           </Col>
         </Row>
-        <Row className="align-items-center w-100">
+        <Row className="align-items-center">
           <Col xs lg="2" className="fw-bold w-100">
             본인인증
           </Col>
