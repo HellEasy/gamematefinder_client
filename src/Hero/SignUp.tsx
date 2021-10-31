@@ -7,32 +7,32 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <BSForm {...props}>
-        <Row className="align-items-center w-100">
-          <Col xs lg="2" className="fw-bold w-100">
-            <BSForm.Label className="fw-bold">ID</BSForm.Label>
-          </Col>
-          <Col xs={6}>
-            <BSForm.Control required className="rounded-3" type="text" />
-          </Col>
-          <Col>
-            <Button className="doublecheck">중복확인</Button>
-          </Col>
+        <BSForm.Group controlId = "formSignUpId">
+          <Row className="align-items-center w-100">
+            <Col xs lg="2" className="fw-bold w-100">
+              <BSForm.Label className="fw-bold">ID</BSForm.Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              <BSForm.Control required className="rounded-3" type="text" />
+            </Col>
+            <Col>
+              <Button className="doublecheck">중복확인</Button>
+            </Col>
+          </Row>
+        </BSForm.Group> {/*ID group */}
+        <Row className="align-items-center">
+          <BSForm.Group as={Col} className="mb-3" controlId="formSignUpPassword">
+            <BSForm.Label className="fw-bold">Password</BSForm.Label>
+            <BSForm.Control required className="rounded-3 w-100" type="password" />
+          </BSForm.Group>
         </Row>
         <Row className="align-items-center">
-          <Col xs lg="2" className="fw-bold w-100">
-            Password
-          </Col>
-          <Col xs={6}>
-            <BSForm.Control required className="rounded-3" type="text" />
-          </Col>
-        </Row>
-        <Row className="align-items-center">
-          <Col xs lg="2" className="fw-bold w-100">
-            이름
-          </Col>
-          <Col xs={6}>
-            <BSForm.Control required className="rounded-3" type="text" />
-          </Col>
+          <BSForm.Group as = {Col} className = "mb-3" controlId="formSignUpName">
+            <BSForm.Label className="fw-bold">이름</BSForm.Label>
+            <BSForm.Control required className="rounded-3 w-100" type="text"/>
+          </BSForm.Group>
         </Row>
         <Row className="align-items-center">
           <BSForm.Group as={Col} className="mb-3" controlId="formSignUpBirthDay">
@@ -41,43 +41,41 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
-          <Col xs lg="2" className="fw-bold w-100">
-            성별
-          </Col>
-          <Col xs={6}>
+          <BSForm.Group as = {Col} className="mb-3" controlId="formSignUpSex">
+            <BSForm.Label className="fw-bold">성별</BSForm.Label>
             <BSForm.Select required className="rounded-3">
               <option value="male">남자</option>
               <option value="female">여자</option>
               <option value="unknown">선택안함</option>
             </BSForm.Select>
-          </Col>
+          </BSForm.Group>
         </Row>
         <Row className="align-items-center">
-          <Col xs lg="2" className="fw-bold w-100">
-            E-mail
-          </Col>
-          <Col xs={6}>
+          <BSForm.Group as = {Col} className = "mb-3" controlId="formSignUpMail">
+            <BSForm.Label className="fw-bold">E-mail</BSForm.Label>
             <BSForm.Control required className="rounded-3" type="email" placeholder="name@example.com" />
-          </Col>
+          </BSForm.Group>
         </Row>
+        <BSForm.Group controlId = "formSignUpId">
+          <Row className="align-items-center w-100">
+            <Col xs lg="2" className="fw-bold w-100">
+              <BSForm.Label className="fw-bold">본인인증</BSForm.Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              <BSForm.Control required className="rounded-3" type="text" placeholder="010-xxxx-xxxx"/>
+            </Col>
+            <Col>
+              <Button className="codesend">인증번호 받기</Button>
+            </Col>
+          </Row>
+        </BSForm.Group> 
         <Row className="align-items-center">
-          <Col xs lg="2" className="fw-bold w-100">
-            본인인증
-          </Col>
-          <Col xs={6}>
-            <BSForm.Control required className="rounded-3" type="text" placeholder="010-xxxx-xxxx" />
-          </Col>
-          <Col>
-            <Button className="codesend">인증번호 받기</Button>
-          </Col>
-        </Row>
-        <Row className="align-items-center">
-          <Col xs lg="2" className="fw-bold w-100">
-            인증번호 입력
-          </Col>
-          <Col xs={6}>
-            <BSForm.Control required className="rounded-3" type="text" />
-          </Col>
+          <BSForm.Group as = {Col} className = "mb-3" controlId="formSignUpName">
+            <BSForm.Label className="fw-bold">인증번호 입력</BSForm.Label>
+            <BSForm.Control required className="rounded-3 w-100" type="text"/>
+          </BSForm.Group>
         </Row>
         <Row className="align-items-center">
           <Link to="#">
