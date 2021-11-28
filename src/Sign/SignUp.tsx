@@ -1,39 +1,36 @@
 import React from "react"
-import { Button, Col, Form as BSForm, Row } from "react-bootstrap"
+import { Button, ToggleButtonGroup, Col, Form as BSForm, Row, ToggleButton, Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
 import Wrapper from "./Wrapper"
 
 const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <>
       <BSForm {...props} className="m-3">
-        <BSForm.Group controlId="formSignUpId">
-          <Row className="align-items-center w-100">
-            <Col xs lg="2" className="fw-bold w-100">
-              <BSForm.Label className="fw-bold">ID</BSForm.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={6}>
-              <BSForm.Control required className="rounded-3" type="text" />
-            </Col>
-            <Col>
-              <Button className="doublecheck">중복확인</Button>
-            </Col>
-          </Row>
-        </BSForm.Group>{" "}
+        <Row className="align-items-center">
+          <BSForm.Group as={Col} controlId="formSignUpId">
+            <BSForm.Label className="fw-bold">ID</BSForm.Label>
+            <Row>
+              <Col xxl={8}>
+                <BSForm.Control required className="rounded-3" type="text" />
+              </Col>
+              <Col className="my-2">
+                <Button className="w-100 doublecheck">중복확인</Button>
+              </Col>
+            </Row>
+          </BSForm.Group>
+        </Row>
         {/*ID group */}
         <Row className="align-items-center">
           <BSForm.Group as={Col} className="mb-3" controlId="formSignUpPassword">
             <BSForm.Label className="fw-bold">Password</BSForm.Label>
-            <BSForm.Control required className="rounded-3 w-100" type="password" />
+            <BSForm.Control required className="rounded-3" type="password" />
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
           <BSForm.Group as={Col} className="mb-3" controlId="formSignUpName">
             <BSForm.Label className="fw-bold">이름</BSForm.Label>
-            <BSForm.Control required className="rounded-3 w-100" type="text" />
+            <BSForm.Control required className="rounded-3" type="text" />
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
@@ -45,11 +42,17 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
         <Row className="align-items-center">
           <BSForm.Group as={Col} className="mb-3" controlId="formSignUpSex">
             <BSForm.Label className="fw-bold">성별</BSForm.Label>
-            <BSForm.Select required className="rounded-3">
-              <option value="male">남자</option>
-              <option value="female">여자</option>
-              <option value="unknown">선택안함</option>
-            </BSForm.Select>
+            <ToggleButtonGroup className="w-100" type="radio" name="options" defaultValue={1}>
+              <ToggleButton id="tbg-radio-1" value={1} variant={"outline-primary"}>
+                남자
+              </ToggleButton>
+              <ToggleButton id="tbg-radio-2" value={2} variant={"outline-primary"}>
+                여자
+              </ToggleButton>
+              <ToggleButton id="tbg-radio-3" value={3} variant={"outline-primary"}>
+                선택안함
+              </ToggleButton>
+            </ToggleButtonGroup>
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
@@ -58,21 +61,19 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
             <BSForm.Control required className="rounded-3" type="email" placeholder="name@example.com" />
           </BSForm.Group>
         </Row>
-        <BSForm.Group controlId="formSignUpId">
-          <Row className="align-items-center w-100">
-            <Col xs lg="2" className="fw-bold w-100">
-              <BSForm.Label className="fw-bold">본인인증</BSForm.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={6}>
-              <BSForm.Control required className="rounded-3" type="text" placeholder="010-xxxx-xxxx" />
-            </Col>
-            <Col>
-              <Button className="codesend">인증번호 받기</Button>
-            </Col>
-          </Row>
-        </BSForm.Group>
+        <Row className="align-items-center">
+          <BSForm.Group as={Col} controlId="formSignUpId">
+            <BSForm.Label className="fw-bold">본인인증</BSForm.Label>
+            <Row>
+              <Col xxl={8}>
+                <BSForm.Control required className="rounded-3" type="text" placeholder="010-xxxx-xxxx" />
+              </Col>
+              <Col className="my-2">
+                <Button className="w-100 codesend">인증번호 받기</Button>
+              </Col>
+            </Row>
+          </BSForm.Group>
+        </Row>
         <Row className="align-items-center">
           <BSForm.Group as={Col} className="mb-3" controlId="formSignUpAuthenticationNumber">
             <BSForm.Label className="fw-bold">인증번호 입력</BSForm.Label>
@@ -87,20 +88,14 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
           </Link>
         </Row>
         <Row className="text-center my-3">
-          <Link to="/login">Already have an Account?</Link>
+          <Link to="/signin">Already have an Account?</Link>
         </Row>
       </BSForm>
-    </motion.div>
+    </>
   )
 }
 
-const Hero: React.FC<React.HTMLAttributes<HTMLDivElement>> = props => {
-  return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <h1> Welcome! </h1>
-    </motion.div>
-  )
-}
+const Hero: React.FC<React.HTMLAttributes<HTMLDivElement>> = props => <h1> Welcome! </h1>
 
 const Page = () => {
   return <Wrapper hero={<Hero />} form={<Form />} />
