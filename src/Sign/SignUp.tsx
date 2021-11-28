@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, ToggleButtonGroup, Col, Form as BSForm, Row, ToggleButton, Container } from "react-bootstrap"
+import { Button, Col, Form as BSForm, Row, ToggleButton, ToggleButtonGroup } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import Wrapper from "./Wrapper"
 
@@ -8,14 +8,16 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
     <>
       <BSForm {...props} className="m-3">
         <Row className="align-items-center">
-          <BSForm.Group as={Col} controlId="formSignUpId">
+          <BSForm.Group as={Col} className="mb-3" controlId="formSignUpId">
             <BSForm.Label className="fw-bold">ID</BSForm.Label>
-            <Row>
+            <Row className="align-items-center">
               <Col xxl={8}>
                 <BSForm.Control required className="rounded-3" type="text" />
               </Col>
               <Col className="my-2">
-                <Button className="w-100 doublecheck">중복확인</Button>
+                <Button className="w-100 doublecheck" variant="outline-primary">
+                  중복확인
+                </Button>
               </Col>
             </Row>
           </BSForm.Group>
@@ -62,14 +64,16 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
-          <BSForm.Group as={Col} controlId="formSignUpId">
+          <BSForm.Group as={Col} className="mb-3" controlId="formSignUpId">
             <BSForm.Label className="fw-bold">본인인증</BSForm.Label>
-            <Row>
+            <Row className="align-items-center">
               <Col xxl={8}>
                 <BSForm.Control required className="rounded-3" type="text" placeholder="010-xxxx-xxxx" />
               </Col>
               <Col className="my-2">
-                <Button className="w-100 codesend">인증번호 받기</Button>
+                <Button className="w-100 codesend" variant="outline-primary">
+                  인증번호 받기
+                </Button>
               </Col>
             </Row>
           </BSForm.Group>
