@@ -4,11 +4,12 @@ import { Link } from "react-router-dom"
 import LolImg from "../img/GameLogo/lol.png"
 import LostArkImg from "../img/GameLogo/lostark.png"
 import { motion } from "framer-motion"
+import Wrapper from "./Wrapper"
 
-const Form = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLElement>>((props, ref) => {
+const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
   return (
-    <div ref={ref}>
-      <BSForm {...props} className={`m-3${props.className ? " " + props.className : ""}`}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <BSForm {...props} className="m-3">
         <Row className="mb-1">
           <BSForm.Group as={Col} className="mb-3" controlId="formLoginID">
             <BSForm.Label className="fw-bold">ID</BSForm.Label>
@@ -46,14 +47,14 @@ const Form = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLElement>>
           </Col>
         </Row>
       </BSForm>
-    </div>
+    </motion.div>
   )
-})
-const Hero: React.FC<React.HTMLAttributes<HTMLDivElement> & { breakpoint: string }> = props => {
+}
+
+const Hero: React.FC<React.HTMLAttributes<HTMLDivElement>> = props => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <h1 className={`d-block d-${props.breakpoint}-none`}>GAME MATE FINDER</h1>
-      <h1 className={`d-none d-${props.breakpoint}-block`}>
+      <h1>
         GAME
         <br />
         MATE
@@ -61,6 +62,7 @@ const Hero: React.FC<React.HTMLAttributes<HTMLDivElement> & { breakpoint: string
         FINDER
         <br />
       </h1>
+
       <div>
         <Image src={LolImg} height="75" alt="Lol Logo" />
         <Image src={LostArkImg} height="75" alt="LostArk Logo" />
@@ -69,4 +71,8 @@ const Hero: React.FC<React.HTMLAttributes<HTMLDivElement> & { breakpoint: string
   )
 }
 
-export { Form, Hero }
+const Page = () => {
+  return <Wrapper hero={<Hero />} form={<Form />} />
+}
+
+export { Form, Hero, Page }

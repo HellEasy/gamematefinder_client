@@ -1,18 +1,20 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { HashRouter, Route, Switch } from "react-router-dom"
-import HeroPage from "./Hero"
+import { HashRouter as Router, Route, Routes } from "react-router-dom"
+import { Page as SignInPage } from "./Sign/SignIn"
+import { Page as SignUpPage } from "./Sign/SignUp"
 import MainPage from "./Main"
 import reportWebVitals from "./reportWebVitals"
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <Switch>
-        <Route exact path="/" component={MainPage} />
-        <Route path={["/login", "/signup"]} component={HeroPage} />
-      </Switch>
-    </HashRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root"),
 )
