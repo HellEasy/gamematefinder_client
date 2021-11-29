@@ -59,7 +59,7 @@ const Hero: React.FC<React.HTMLAttributes<HTMLDivElement>> = props => (
       <br />
     </h1>
 
-    <div>
+    <div className="gamelogos">
       <Image src={LolImg} height="75" alt="Lol Logo" />
       <Image src={LostArkImg} height="75" alt="LostArk Logo" />
     </div>
