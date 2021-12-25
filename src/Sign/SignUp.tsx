@@ -89,6 +89,8 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
           <BSForm.Group className="mb-3" controlId="formSignUpAuthenticationNumber">
             <Col xxl={8}>
               <BSForm.Label className="fw-bold">인증번호 입력</BSForm.Label>
+            </Col>
+            <Col className="my-2">
               <BSForm.Control required className="rounded-3 w-100 mb-2" type="text" />
               <Button className="w-100 codecheck" variant="outline-primary">
                 인증 확인
