@@ -66,6 +66,13 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
         <Row className="align-items-center">
           <BSForm.Group as={Col} className="mb-3" controlId="formSignUpId">
             <BSForm.Label className="fw-bold">본인인증</BSForm.Label>
+            {["checkbox"].map(type => (
+              <BSForm.Group key={`inline-${type}`} className="align-items-center, mb-2" controlId="formSignUpCarrier">
+                <BSForm.Check inline label="SKT" name="group1" id={`inline-${type}-1`} />
+                <BSForm.Check inline label="KT" name="group1" id={`inline-${type}-2`} />
+                <BSForm.Check inline label="LG U+" name="group1" id={`inline-${type}-3`} />
+              </BSForm.Group>
+            ))}
             <Row className="align-items-center">
               <Col xxl={8}>
                 <BSForm.Control required className="rounded-3" type="text" placeholder="010-xxxx-xxxx" />
@@ -79,9 +86,14 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
-          <BSForm.Group as={Col} className="mb-3" controlId="formSignUpAuthenticationNumber">
-            <BSForm.Label className="fw-bold">인증번호 입력</BSForm.Label>
-            <BSForm.Control required className="rounded-3 w-100" type="text" />
+          <BSForm.Group className="mb-3" controlId="formSignUpAuthenticationNumber">
+            <Col xxl={8}>
+              <BSForm.Label className="fw-bold">인증번호 입력</BSForm.Label>
+              <BSForm.Control required className="rounded-3 w-100 mb-2" type="text" />
+              <Button className="w-100 codecheck" variant="outline-primary">
+                인증번호 확인
+              </Button>
+            </Col>
           </BSForm.Group>
         </Row>
         <Row className="align-items-center">
