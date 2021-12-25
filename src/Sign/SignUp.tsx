@@ -91,7 +91,7 @@ const Form: React.FC<React.HTMLAttributes<HTMLElement>> = props => {
               <BSForm.Label className="fw-bold">인증번호 입력</BSForm.Label>
               <BSForm.Control required className="rounded-3 w-100 mb-2" type="text" />
               <Button className="w-100 codecheck" variant="outline-primary">
-                인증번호 확인
+                인증 확인
               </Button>
             </Col>
           </BSForm.Group>
