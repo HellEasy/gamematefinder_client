@@ -1,7 +1,7 @@
 import React from "react"
 import PartyProps from "../../interfaces/PartyProps"
 import { Card, Placeholder } from "react-bootstrap"
-import { BiTimeFive } from "react-icons/all"
+import { BiTimeFive } from "react-icons/bi"
 import { Link } from "react-router-dom"
 import "./PartyCard.scss"
 
@@ -25,7 +25,7 @@ function getRTF(date: Date): string {
   return rtf.format(Math.round(elapsed / unitsTable.second), "second")
 }
 
-interface PartyCardProps extends Partial<PartyProps> {}
+interface PartyCardProps extends Partial<PartyProps> { }
 
 const PartyCard: React.FC<PartyCardProps> = props => {
   return (

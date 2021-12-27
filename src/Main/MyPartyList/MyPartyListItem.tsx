@@ -1,6 +1,6 @@
 import React from "react"
 import { Badge, Col, Container, ListGroup, Row } from "react-bootstrap"
-import { FaUser } from "react-icons/all"
+import { FaUser } from "react-icons/fa"
 import PartyProps from "../../interfaces/PartyProps"
 import { ListGroupItemProps } from "react-bootstrap/ListGroupItem"
 
