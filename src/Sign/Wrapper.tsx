@@ -6,7 +6,6 @@ import useWindowDimensions from "../utils/useWindowDimensions"
 
 const Wrapper: React.FC<React.HTMLAttributes<HTMLElement> & { hero: React.ReactElement; form: React.ReactElement }> =
   props => {
-    // FIXME: Only overflow-auto for AnimatedForm Element
     const { width, height } = useWindowDimensions()
     const overflowRef = React.useRef(null)
     const [isOverflow, setIsOverflow] = useState(true)
@@ -29,7 +28,7 @@ const Wrapper: React.FC<React.HTMLAttributes<HTMLElement> & { hero: React.ReactE
         <Container fluid className="d-none d-md-block p-0 vh-100">
           <Row className="m-0 h-100" ref={overflowRef}>
             <Col className="hero p-0 position-relative" md={8}>
-              <Container fluid className="position-absolute top-50 translate-middle-y">
+              <Container fluid className="position-sticky top-50 translate-middle-y">
                 {AnimatedHero}
               </Container>
             </Col>
