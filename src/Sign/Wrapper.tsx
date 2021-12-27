@@ -7,7 +7,7 @@ import useWindowDimensions from "../utils/useWindowDimensions"
 const Wrapper: React.FC<React.HTMLAttributes<HTMLElement> & { hero: React.ReactElement; form: React.ReactElement }> =
   props => {
     // FIXME: Only overflow-auto for AnimatedForm Element
-    const { height } = useWindowDimensions()
+    const { width, height } = useWindowDimensions()
     const overflowRef = React.useRef(null)
     const [isOverflow, setIsOverflow] = useState(true)
 
@@ -15,7 +15,7 @@ const Wrapper: React.FC<React.HTMLAttributes<HTMLElement> & { hero: React.ReactE
       if (!overflowRef.current) return
       const obj: HTMLElement = overflowRef.current
       setIsOverflow(obj.scrollHeight > obj.clientHeight)
-    }, [height]);
+    }, [width, height]);
 
     const AnimatedHero = <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       {props.hero}
