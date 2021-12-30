@@ -11,14 +11,6 @@ import MyParty from "./Sidebar/MyParty"
 import SearchBar from "./Sidebar/Search"
 
 function Index() {
-  const [sidebarSelected, setSidebarSelected] = useState<boolean[]>([false, false])
-  const toggleSidebar = (idx: number) => {
-    const newSidebarSelected = new Array(sidebarSelected.length).fill(false);
-    if (sidebarSelected[idx]) newSidebarSelected[idx] = false
-    else newSidebarSelected[idx] = true
-    setSidebarSelected(newSidebarSelected)
-  }
-
   return (
     <Container fluid className="d-flex flex-column vh-100">
       {/* Navbar */}
