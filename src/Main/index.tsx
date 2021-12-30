@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { FiSearch } from "react-icons/fi"
 import { GiPartyHat } from "react-icons/gi"
