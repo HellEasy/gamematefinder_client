@@ -1,0 +1,14 @@
+.sidebar {
+  transition: 0.5s;
+}
+
+.sidebar-active {
+  width: 350px;
+}
+
+.sidebar-inactive {
+  width: 0;
+  * {
+    display: none;
+  }
+}
