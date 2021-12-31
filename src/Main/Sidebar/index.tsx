@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
 import { Container, Nav } from "react-bootstrap";
+import "./index.scss";
 
 interface SideBarProps {
   children: React.ReactComponentElement<typeof SideBarItem>[]
@@ -12,16 +13,16 @@ const SideBar: FunctionComponent<SideBarProps> = ({ children }) => {
   return (<>
     <div className="d-flex flex-column flex-shrink-0 bg-light p-2" style={{ width: "4.5rem" }}>
       <Nav variant="pills" className="nav-flush flex-column mb-auto text-center">
-        {children.map(child =>
-          <SideBarItem key={child.props.value} {...(child.props)}
-            active={selectedItem === child.props.value}
-            onClick={() => toggleItem(child.props.value)} />)
+        {children.map((child, index) =>
+          <SideBarItem key={index} {...(child.props)}
+            active={selectedItem === index}
+            onClick={() => toggleItem(index)} />)
         }
       </Nav>
     </div>
-    {children.map(child =>
-      <Container key={child.props.value} fluid
-        className={`m-0 p-0 sidebar ${selectedItem === child.props.value ? "sidebar-active" : "sidebar-inactive"}`}>
+    {children.map((child, index) =>
+      <Container key={index} fluid
+        className={`m-0 p-0 sidebar ${selectedItem === index ? "sidebar-active" : "sidebar-inactive"}`}>
         {child.props.children}
       </Container>
     )}
@@ -30,7 +31,7 @@ const SideBar: FunctionComponent<SideBarProps> = ({ children }) => {
 }
 
 interface SideBarItemProps {
-  value: number,
+  // value: number,
   icon: React.ReactElement,
   children: React.ReactElement,
   active?: boolean,
