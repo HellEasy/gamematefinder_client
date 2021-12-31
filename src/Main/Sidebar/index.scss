@@ -1,0 +1,28 @@
+@import "../../../public/stylesheet/bootstrap";
+
+.sidebar {
+  // transition: 0.5s;
+}
+
+.sidebar-active {
+  width: 350px;
+}
+
+.sidebar-inactive {
+  width: 0;
+  * {
+    display: none;
+  }
+}
+
+// @include media-breakpoint-down(sm) {
+//   .sidebar-active {
+//     width: 100%;
+//   }
+//   .sidebar-inactive {
+//     width: 0;
+//     * {
+//       display: none;
+//     }
+//   }
+// }
