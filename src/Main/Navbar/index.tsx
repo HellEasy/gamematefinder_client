@@ -45,7 +45,7 @@ const CustomNavbar = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="p-0">
           <Nav className="ms-auto px-3 py-1">
-            <Nav.Link href="#feaures" className="d-inline text-uppercase fw-bold fs-3 mx-2 align-center">
+            <Nav.Link href="#feaures" className="d-inline text-uppercase fw-bold fs-3 mx-4 align-center">
               <Image roundedCircle src={UserImage} width="40px" className="d-inline mx-2 align-middle" />
               User Name
             </Nav.Link>
