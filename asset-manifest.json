@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/gamematefinder_client/static/css/main.fefc5a4d.css",
-    "main.js": "/gamematefinder_client/static/js/main.d1d052f5.js",
+    "main.css": "/gamematefinder_client/static/css/main.c9ddb775.css",
+    "main.js": "/gamematefinder_client/static/js/main.5cbbc335.js",
     "static/js/787.d598f7da.chunk.js": "/gamematefinder_client/static/js/787.d598f7da.chunk.js",
     "static/media/UserImage.jpg": "/gamematefinder_client/static/media/UserImage.4f8e116e8c4e11c7afee.jpg",
     "static/media/lostark.png": "/gamematefinder_client/static/media/lostark.68dfc74db580f8a0e56f.png",
     "static/media/lol.png": "/gamematefinder_client/static/media/lol.484cafcf53cf80a10fba.png",
     "index.html": "/gamematefinder_client/index.html",
-    "main.fefc5a4d.css.map": "/gamematefinder_client/static/css/main.fefc5a4d.css.map",
-    "main.d1d052f5.js.map": "/gamematefinder_client/static/js/main.d1d052f5.js.map",
+    "main.c9ddb775.css.map": "/gamematefinder_client/static/css/main.c9ddb775.css.map",
+    "main.5cbbc335.js.map": "/gamematefinder_client/static/js/main.5cbbc335.js.map",
     "787.d598f7da.chunk.js.map": "/gamematefinder_client/static/js/787.d598f7da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fefc5a4d.css",
-    "static/js/main.d1d052f5.js"
+    "static/css/main.c9ddb775.css",
+    "static/js/main.5cbbc335.js"
   ]
 }
