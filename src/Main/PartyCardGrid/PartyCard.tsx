@@ -25,7 +25,7 @@ function getRTF(date: Date): string {
   return rtf.format(Math.round(elapsed / unitsTable.second), "second")
 }
 
-interface PartyCardProps extends Partial<PartyProps> { }
+interface PartyCardProps extends Partial<PartyProps> {}
 
 const PartyCard: React.FC<PartyCardProps> = props => {
   return (
