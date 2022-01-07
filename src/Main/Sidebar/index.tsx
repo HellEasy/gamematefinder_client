@@ -10,28 +10,25 @@ const SideBar: FunctionComponent<SideBarProps> = ({ children }) => {
   const [selectedItem, setSelectedItem] = useState<number | undefined>()
   const toggleItem = (idx: number) => setSelectedItem(idx === selectedItem ? undefined : idx)
 
-  return (<>
-    <div className="d-flex flex-column flex-shrink-0 bg-light p-2" style={{ width: "4.5rem" }}>
-      <Nav variant="pills" className="nav-flush flex-column mb-auto text-center">
-        {children.map((child, index) =>
-          <SideBarItem key={index} {...(child.props)}
-            active={selectedItem === index}
-            onClick={() => toggleItem(index)} />)
-        }
-      </Nav>
-    </div>
+  return (<div className="d-flex border-end border-1">
+    <Nav variant="pills" className="nav-flush flex-column mb-auto text-center bg-light h-100 border-end border-1">
+      {children.map((child, index) =>
+        <SideBarItem key={index} {...(child.props)}
+          active={selectedItem === index}
+          onClick={() => toggleItem(index)} />)
+      }
+    </Nav>
+
     {children.map((child, index) =>
       <Container key={index} fluid
         className={`m-0 p-0 sidebar ${selectedItem === index ? "sidebar-active" : "sidebar-inactive"}`}>
         {child.props.children}
       </Container>
     )}
-  </>);
-
+  </div>);
 }
 
 interface SideBarItemProps {
-  // value: number,
   icon: React.ReactElement,
   children: React.ReactElement,
   active?: boolean,
@@ -39,11 +36,11 @@ interface SideBarItemProps {
 }
 
 const SideBarItem = ({ icon, active, onClick }: SideBarItemProps) => {
-  return <Nav.Item>
+  return <Nav.Item className="mx-2 my-1">
     <Nav.Link className="py-3" active={active} onClick={onClick}>
       {icon}
     </Nav.Link>
-  </Nav.Item >;
+  </Nav.Item>;
 }
 
 export { SideBar, SideBarItem };
