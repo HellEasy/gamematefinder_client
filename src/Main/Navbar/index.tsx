@@ -31,22 +31,22 @@ const CustomNavbar = () => {
       <Container fluid className="p-0">
         <Navbar.Brand className="ms-0">
           <NavDropdown
-            title={<img src={gameList[game].imgsrc} height="75" alt={`${gameList[game].name} Logo`} />}
+            title={<img src={gameList[game].imgsrc} height="35" alt={`${gameList[game].name} Logo`} />}
             menuVariant="dark"
             className="p-0"
           >
             {Object.entries(gameList).map(([key, value]) => (
               <NavDropdown.Item key={key} href={value.href} onClick={() => setGame(key)}>
-                <img src={value.imgsrc} height="75" alt={`${value.name} Logo`} />
+                <img src={value.imgsrc} height="35" alt={`${value.name} Logo`} />
               </NavDropdown.Item>
             ))}
           </NavDropdown>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="p-0">
-          <Nav className="ms-auto px-3 py-1">
-            <Nav.Link href="#feaures" className="d-inline text-uppercase fw-bold fs-3 mx-4 align-center">
-              <Image roundedCircle src={UserImage} width="40px" className="d-inline mx-2 align-middle" />
+          <Nav className="ms-auto px-2 py-0">
+            <Nav.Link href="#feaures" className="d-inline text-uppercase fw-bold fs-5 mx-4 align-center">
+              <Image roundedCircle src={UserImage} width="25px" className="d-inline mx-2 align-middle" />
               User Name
             </Nav.Link>
           </Nav>
